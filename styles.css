@@ -1,5 +1,200 @@
-*{
+/* ---------- RESET ---------- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* ---------- FUENTES Y COLORES ---------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: white;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    color: white;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-nav img {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.left-nav h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+/* ---------- NAV ---------- */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("/imgs/background_pitagoras.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center -420px;;
+    
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* ajusta la altura del degradado */
+  background: linear-gradient(to bottom, transparent, #001b60);
+  pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 4em;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #DDDDDD;
+}
+
+button {
+    background-color: #ffd700;
+    color: #0b1842;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;   
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.2);
+}
+/*---------- INFO SECTION ---------- */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 0 auto;
+  background-color: #0b1842;
+  color: white;
+  padding: 6rem 10%;
+  
+  box-sizing: border-box;
+}
+
+.info-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-left img {
+  width: 600px;
+  max-width: 600px;
+  height: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra el texto dentro del contenedor */
+  max-width: 600px;
+  gap: 20px;
+}
+.info-right h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.info-right p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #dddddd;
+  max-width: 600px;
+  text-align: justify;
+}
+.info-right button {
+  align-self: flex-start; /* Alinea el botón al inicio del contenedor */
+  margin-top: 20px;
+  padding: 15px 30px;
+  color: #0b1842;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
 }
