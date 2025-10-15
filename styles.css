@@ -63,7 +63,7 @@ nav a:hover {
 
 .hero {
     position: relative;
-    height: 90vh;
+    height: 80vh;
     background: url("/imgs/background_pitagoras.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -102,14 +102,13 @@ nav a:hover {
 
 .hero-content h1 {
     font-family: 'Montserrat', sans-serif;
-
-    font-size: 4em;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 900;
     margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.3em;
+    font-size: clamp(1rem, 2.5vw, 1.3em);
     margin-bottom: 25px;
     color: #DDDDDD;
 }
@@ -141,7 +140,7 @@ button:hover {
   margin: 0 auto;
   background-color: #0b1842;
   color: white;
-  padding: 6rem 10%;
+  padding: 4rem 10%;
   
   box-sizing: border-box;
 }
@@ -154,8 +153,8 @@ button:hover {
 
 .info-left img {
   width: 600px;
-  max-width: 600px;
-  height: 600px;
+  max-width: 500px;
+  height: 500px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -166,7 +165,7 @@ button:hover {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra el texto dentro del contenedor */
+  justify-content: center; 
   max-width: 600px;
   gap: 20px;
 }
@@ -181,7 +180,7 @@ button:hover {
   line-height: 1.6;
   color: #dddddd;
   max-width: 600px;
-  text-align: justify;
+  text-align: left;
 }
 .info-right button {
   align-self: flex-start; /* Alinea el botón al inicio del contenedor */
@@ -197,4 +196,113 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
+}
+/* ---------- VALORES SECTION ---------- */
+.values-section{
+  text-align: center;
+  padding: 4rem 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.values-section h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0b1842;
+  font-weight: 800;
+}
+.values-section h2 span {
+  color: #5c6bc0;
+  font-style: italic;
+}
+
+.intro {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+}
+
+.value-item {
+
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 320px;
+  margin : 1rem auto;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* evita desbordamientos */
+
+
+}
+.value-item.reverse{
+   flex-direction: reverse;
+}
+.value-item img {
+  width: 400px;
+  height: 80%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text {
+  width: 400px;
+  height: 80%;
+  padding: 2rem;
+  text-align: left;
+
+  }
+
+  .value-item:not(.reverse) img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.value-item:not(.reverse) .text {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Reversa: imagen derecha, texto izquierda */
+.value-item.reverse img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.value-item.reverse .text {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.text.white {
+  background-color: #0b1842;
+}
+.text.white h3 {
+  color: white;
+}
+.text.white p {
+  color: #ddd;
+}
+
+.text.blue {
+  background-color: #d3d5db;
+}
+.text.blue h3 {
+  color: #0b1842;
+}
+.text.blue p {
+  color: #333;
+}
+
+.text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+.text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 400px;
 }
