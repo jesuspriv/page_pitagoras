@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* ---------- FUENTES Y COLORES ---------- */
@@ -14,11 +15,12 @@ body {
 
 /* ---------- HEADER ---------- */
 
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #004080;
+    background-color: #0b1842;
     color: white;
     padding: 15px 50px;
     position: sticky;
@@ -35,15 +37,15 @@ header {
 }
 
 .left-nav img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     
 }
 
 .left-nav h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1em;
 }
 
 /* ---------- NAV ---------- */
@@ -53,6 +55,8 @@ nav a {
     margin: 0 15px;
     font-weight: 600;
     transition: 0.3s;
+    font-size: 0.8em;
+    font-family: sans-serif;
 }
 
 nav a:hover {
@@ -79,7 +83,7 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 10px; /* ajusta la altura del degradado */
-  background: linear-gradient(to bottom, transparent, #001b60);
+  background: linear-gradient(to bottom, transparent, #353c4b);
   pointer-events: none;
 }
 
@@ -89,7 +93,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -101,16 +105,18 @@ nav a:hover {
 }
 
 .hero-content h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 900;
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
 .hero-content p {
+  
     font-size: clamp(1rem, 2.5vw, 1.3em);
     margin-bottom: 25px;
-    color: #DDDDDD;
+    color: #ddd;
+    font-weight: 500;
 }
 
 button {
@@ -131,14 +137,14 @@ button:hover {
     transform: scale(1.2);
 }
 /*---------- INFO SECTION ---------- */
-.info {
+#info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 5rem;
   margin: 0 auto;
-  background-color: #0b1842;
+  background-color: #ffffff;
   color: white;
   padding: 4rem 10%;
   
@@ -157,7 +163,7 @@ button:hover {
   height: 500px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .info-right {
@@ -174,11 +180,12 @@ button:hover {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #0b1842;
 }
 .info-right p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #dddddd;
+  color: #716e7c;
   max-width: 600px;
   text-align: left;
 }
@@ -189,14 +196,6 @@ button:hover {
   color: #0b1842;
 }
 
-/* ---------- FOOTER ---------- */
-footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-}
 /* ---------- VALORES SECTION ---------- */
 .values-section{
   text-align: center;
@@ -305,4 +304,13 @@ footer {
   line-height: 1.6;
   text-align: left;
   max-width: 400px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
 }
