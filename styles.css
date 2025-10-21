@@ -17,35 +17,46 @@ body {
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0b1842;
-    color: white;
-    padding: 15px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b1842;
+  color: white;
+  padding: 18px 50px 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .left-nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 0;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 32px;
+}
+
 
 .left-nav img {
     width: 40px;
     height: 40px;
-    
+
 }
 
 .left-nav h1 {
     font-family: sans-serif;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 /* ---------- NAV ---------- */
@@ -199,7 +210,7 @@ button:hover {
 /* ---------- VALORES SECTION ---------- */
 .values-section{
   text-align: center;
-  padding: 4rem 10%;
+  padding: 2rem 10%;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -306,9 +317,117 @@ button:hover {
   max-width: 400px;
 }
 
+
+/* ---------- SOCIAL SECTION ---------- */
+.social-preview {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.social-preview h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b1842;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+.social-preview p { 
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.2rem;
+}
+
+.social-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+.social-card {
+  width: 300px;
+  height: 310px;
+  background: #e1dbdb;
+  color: #0b1842; 
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.preview {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Alinear la tarjeta en columna para que la imagen y el botón queden contiguos */
+.social-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.social-card .preview{
+  display: block; /* elimina espacio en línea debajo de imágenes */
+  margin: 0; /* asegurar que no haya margen inferior */
+  flex-shrink: 0; /* mantener la altura de la imagen */
+}
+
+.social-preview button{
+  margin: 0; /* quitar cualquier margen por defecto */
+  border-radius: 0 0 5px 5px; /* redondear solo la parte inferior para coincidir con la tarjeta */
+  padding: 12px 16px;
+}
+
+.social-preview button {
+  width: 100%;
+    background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  
+}
+
+/* Anular hover global para los botones dentro de la sección social-preview */
+.social-preview button:hover {
+  transform: none; /* evita el scale definido en button:hover */
+  /* mantener el mismo fondo para que no cambie al pasar el cursor */
+  filter: none;
+}
+
+.facebook button {
+  background: linear-gradient(135deg, #1877F2, #3b5998);
+}
+
+
 /* ---------- FOOTER ---------- */
 footer {
-    background-color: #004080;
+    background-color: #0b1842;
     color: white;
     text-align: center;
     padding: 20px 0;
